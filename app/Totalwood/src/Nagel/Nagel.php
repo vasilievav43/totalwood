@@ -89,8 +89,6 @@ class Nagel
     public function metrovPogon(){
         return $this->metrovPogon=$this->dlinaZagotovki*$this->colvoCherencov/1000;
     }
-
-
     /*кол-во установленных нагелей*/
     public function colvo(){
         return $this->colvo = ceil($this->dlinaSteni*1000/$this->shag);
