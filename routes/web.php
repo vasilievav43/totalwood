@@ -16,3 +16,4 @@ Auth::routes([
 Route::get('/home', [HomeController::class, 'index'])->name('home')->middleware('verified');
 Route::get('/nagel', [NagelController::class, 'index'])->name('nagel');
 Route::post('/nagel/raschet', [NagelController::class, 'raschet'])->name('nagel.raschet');
+/*начать делать лаги*/
