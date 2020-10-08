@@ -171,7 +171,6 @@
                     </div>
                     @endisset
 
-
                     <img src="/img/total/нагель.jpg" width="100%">
                     <img src="/img/total/нагель_цвет.jpg" width="100%">
             </div>
