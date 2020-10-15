@@ -14392,7 +14392,172 @@
      
 }
 
-        namespace Barryvdh\Debugbar { 
+        namespace App\Facades { 
+            /**
+     * 
+     *
+     */ 
+        class Laga {
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function setOs($shirinaPoOsyam, $dlinaPoOsyam, $tolshina1, $tolshina2, $pilmat)
+        {
+                        /** @var \App\Totalwood\src\Laga\Laga $instance */
+                        return $instance->setOs($shirinaPoOsyam, $dlinaPoOsyam, $tolshina1, $tolshina2, $pilmat);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function setV($shirinaVNutri, $dlinaVNutri, $pilmat)
+        {
+                        /** @var \App\Totalwood\src\Laga\Laga $instance */
+                        return $instance->setV($shirinaVNutri, $dlinaVNutri, $pilmat);
+        }
+         
+    }
+            /**
+     * 
+     *
+     */ 
+        class Pilmat {
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function set($visota, $tolshina, $dlina)
+        {
+                        /** @var \App\Totalwood\src\Pilmat\Pilmat $instance */
+                        return $instance->set($visota, $tolshina, $dlina);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function obemOne()
+        {
+                        /** @var \App\Totalwood\src\Pilmat\Pilmat $instance */
+                        return $instance->obemOne();
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function name()
+        {
+                        /** @var \App\Totalwood\src\Pilmat\Pilmat $instance */
+                        return $instance->name();
+        }
+         
+    }
+            /**
+     * 
+     *
+     */ 
+        class Nagel {
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function set($visotaBrevna, $dlinaSteni, $dlinaZagotovki = 2400, $shag = 1500)
+        {
+                        /** @var \App\Totalwood\src\Nagel\Nagel $instance */
+                        return $instance->set($visotaBrevna, $dlinaSteni, $dlinaZagotovki, $shag);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function setCeloe($set = true)
+        {
+                        /** @var \App\Totalwood\src\Nagel\Nagel $instance */
+                        return $instance->setCeloe($set);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function packa()
+        {
+                        /** @var \App\Totalwood\src\Nagel\Nagel $instance */
+                        return $instance->packa();
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function dlina()
+        {
+                        /** @var \App\Totalwood\src\Nagel\Nagel $instance */
+                        return $instance->dlina();
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function metrovPogon()
+        {
+                        /** @var \App\Totalwood\src\Nagel\Nagel $instance */
+                        return $instance->metrovPogon();
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function colvo()
+        {
+                        /** @var \App\Totalwood\src\Nagel\Nagel $instance */
+                        return $instance->colvo();
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function colvoVzag()
+        {
+                        /** @var \App\Totalwood\src\Nagel\Nagel $instance */
+                        return $instance->colvoVzag();
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function colvoCherencov()
+        {
+                        /** @var \App\Totalwood\src\Nagel\Nagel $instance */
+                        return $instance->colvoCherencov();
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function all()
+        {
+                        /** @var \App\Totalwood\src\Nagel\Nagel $instance */
+                        return $instance->all();
+        }
+         
+    }
+     
+}
+
+    namespace Barryvdh\Debugbar { 
             /**
      * 
      *
@@ -18273,6 +18438,9 @@ namespace  {
             class URL extends \Illuminate\Support\Facades\URL {}
             class Validator extends \Illuminate\Support\Facades\Validator {}
             class View extends \Illuminate\Support\Facades\View {}
+            class Laga extends \App\Facades\Laga {}
+            class Pilmat extends \App\Facades\Pilmat {}
+            class Nagel extends \App\Facades\Nagel {}
             class Debugbar extends \Barryvdh\Debugbar\Facade {}
             class Flare extends \Facade\Ignition\Facades\Flare {}
      

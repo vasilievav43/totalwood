@@ -3,7 +3,10 @@
 namespace App\Providers;
 
 
+
+use App\Totalwood\src\Laga\Laga;
 use App\Totalwood\src\Nagel\Nagel;
+use App\Totalwood\src\Pilmat\Pilmat;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -16,6 +19,9 @@ class AppServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->bind('Nagel', Nagel::class);
+        $this->app->bind('Pilmat', Pilmat::class);
+        $this->app->bind('Laga', Laga::class);
+
     }
 
     /**

@@ -189,7 +189,7 @@ return [
     |
     */
 
-    'aliases' => [
+    'aliases' => array(
 
         'App' => Illuminate\Support\Facades\App::class,
         'Arr' => Illuminate\Support\Arr::class,
@@ -227,7 +227,10 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-
-    ],
+        /*свои*/
+        'Laga'=>App\Facades\Laga::class,
+        'Pilmat'=>App\Facades\Pilmat::class,
+        'Nagel'=>App\Facades\Nagel::class,
+    ),
 
 ];

@@ -30,4 +30,6 @@ class NagelController extends Controller
 
         return view('stena.nagel', compact('nagel'));
     }
+
+
 }
