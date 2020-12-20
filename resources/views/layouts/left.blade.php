@@ -55,6 +55,11 @@
                         </a>
                     </li>
                     <li>
+                        <a href="{{route('lagi')}}" title="Стены лаги" data-filter-tags="стены лаги">
+                            <span class="nav-link-text">Лаги</span>
+                        </a>
+                    </li>
+                    <li>
                         <a href="intel_marketing_dashboard.html" title="Marketing Dashboard" data-filter-tags="application intel marketing dashboard">
                             <span class="nav-link-text" data-i18n="nav.application_intel_marketing_dashboard">Marketing Dashboard</span>
                         </a>

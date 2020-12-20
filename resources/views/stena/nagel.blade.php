@@ -15,7 +15,7 @@
         </h1>
     </div>
     <div class="row">
-    <div class="col-xl-6">
+    <div class="col-lg-4">
         <div id="panel-1" class="panel">
             <div class="panel-hdr">
                 <h2>
@@ -32,7 +32,7 @@
                     <div class="panel-tag">
                         <p>Рассчитайте кол-во нагелей</p>
                     </div>
-                    <form action="{{route('nagel.raschet')}}" method="Post">
+                    <form action="{{route('nagel.raschet')}}#result" method="Post">
                         @csrf
                         <div class="form-group">
                             <label class="form-label" for="basic-url">Длина всего бруса</label>
@@ -90,14 +90,80 @@
                     </form>
                 </div>
             </div>
+            <div class="panel-container show">
+                <div class="panel-content">
+                    <div class="panel-tag" id="result">
+                        Результат расчета
+                    </div>
+                    @isset($nagel)
+                        <div class="table-responsive-md">
+                            <table class="table table-bordered m-0">
+                                <thead>
+                                <tr>
+                                    <th>Наименовани</th>
+                                    <th>На четеже</th>
+                                    <th>Значение</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <th scope="row">Метров нагеля</th>
+                                    <td>нет</td>
+                                    <td>{{ $nagel->metrovPogon}} м.п</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Кол-во нагелей / отвертстий</th>
+                                    <td>нет</td>
+                                    <td>{{ $nagel->colvo}} шт.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Кол-во заготовок (черенков)</th>
+                                    <td>нет</td>
+                                    <td>{{ $nagel->colvoCherencov}} шт.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Кол-во нагелей в заготовке</th>
+                                    <td>нет</td>
+                                    <td>{{ $nagel->colvoVzag}} шт.</td>
+                                </tr>
+                                @if($nagel->celoe==true)
+                                    <tr>
+                                        <th scope="row">Кол-во пачек</th>
+                                        <td>нет</td>
+                                        <td>{{ $nagel->pachek}} шт.</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Кол-во заготовок в пачке</th>
+                                        <td>нет</td>
+                                        <td>{{ $nagel->vPachke}} шт.</td>
+                                    </tr>
+                                @endif
+                                <tr>
+                                    <th scope="row">Длина нагеля</th>
+                                    <td>D</td>
+                                    <td>{{ $nagel->dlina}} мм</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Глубина отверстия</th>
+                                    <td>G</td>
+                                    <td>{{ $nagel->dlina+20}} мм</td>
+                                </tr>
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                    @endisset
+                </div>
+            </div>
         </div>
 
     </div>
-    <div class="col-xl-6">
+    <div class="col-lg-8">
         <div id="panel-6" class="panel">
             <div class="panel-hdr">
                 <h2>
-                    Результат расчета <span class="fw-300"></span>
+                    Схема установки<span class="fw-300"></span>
                 </h2>
                 <div class="panel-toolbar">
                     <button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-offset="0,10" data-original-title="Collapse"></button>
@@ -107,71 +173,9 @@
             </div>
             <div class="panel-container show">
                 <div class="panel-content">
-                    <div class="panel-tag">
-                        Результат и принцип расчета
-                    </div>
-
-                    @isset($nagel)
-                    <div class="table-responsive-lg">
-                        <table class="table table-bordered m-0">
-                            <thead>
-                            <tr>
-                                <th>Наименовани</th>
-                                <th>Обозначение на четеже</th>
-                                <th>Значение</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <th scope="row">Метров нагеля</th>
-                                <td>нет</td>
-                                <td>{{ $nagel->metrovPogon}} м.п</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Кол-во нагелей/отвертстий</th>
-                                <td>нет</td>
-                                <td>{{ $nagel->colvo}} шт.</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Кол-во заготовок(черенков)</th>
-                                <td>нет</td>
-                                <td>{{ $nagel->colvoCherencov}} шт.</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Кол-во нагелей в заготовке</th>
-                                <td>нет</td>
-                                <td>{{ $nagel->colvoVzag}} шт.</td>
-                            </tr>
-                            @if($nagel->celoe==true)
-                                <tr>
-                                    <th scope="row">Кол-во пачек</th>
-                                    <td>нет</td>
-                                    <td>{{ $nagel->pachek}} шт.</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Кол-во заготовок в пачке</th>
-                                    <td>нет</td>
-                                    <td>{{ $nagel->vPachke}} шт.</td>
-                                </tr>
-                            @endif
-                            <tr>
-                                <th scope="row">Длина нагеля</th>
-                                <td>D</td>
-                                <td>{{ $nagel->dlina}} мм</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Глубина отверстия</th>
-                                <td>G</td>
-                                <td>{{ $nagel->dlina+20}} мм</td>
-                            </tr>
-
-
-                            </tbody>
-                        </table>
-                    </div>
-                    @endisset
 
                     <img src="/img/total/нагель.jpg" width="100%">
+                    <br><br>
                     <img src="/img/total/нагель_цвет.jpg" width="100%">
             </div>
         </div>
