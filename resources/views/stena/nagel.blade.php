@@ -60,7 +60,6 @@
                             </div>
                             <span class="help-block">Высота бруса, оцб, лафета в милиметрах</span>
                         </div>
-
                         <div class="form-group">
                             <label class="form-label" for="basic-url">Длина заготовки</label>
                             <div class="input-group">
@@ -97,8 +96,6 @@
                             </div>
                         </div>
                         <div class="panel-content border-faded border-left-0 border-right-0 border-bottom-0 d-flex flex-row">
-
-
                             <button class="btn  btn-outline-info  ml-auto waves-effect waves-themed" type="button" data-toggle="modal" data-target="#default-example-modal-lg-center2"><span class="fal fa-cube mr-1"></span>
                                3Д схема
                             </button>
@@ -108,11 +105,6 @@
 
                             <button class="btn btn-primary ml-auto waves-effect waves-themed" type="submit">Расчитать</button>
                         </div>
-
-
-
-
-
                     </form>
                 </div>
             </div>
@@ -196,9 +188,6 @@
                             @endisset
                         </div>
                     </div>
-
-
-
         </div>
     </div>
         <!-- Modal center Large -->
@@ -225,7 +214,7 @@
             <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title"Схема установки</h5>
+                        <h5 class="modal-title">Схема установки</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true"><i class="fal fa-times"></i></span>
                         </button>

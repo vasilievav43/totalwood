@@ -10,6 +10,7 @@ class Pilmat
     public $visota;
     public $tolshina;
     public $dlina;
+    public $plotnost=700;
 
     /*объем 1 пилмата*/
     public $obemOne;

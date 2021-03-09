@@ -84,7 +84,7 @@
 {{--                php7.4 -r "if (hash_file('sha384', 'composer-setup.php') === '756890a4488ce9024fc62c56153228907f1545c228516cbf63f885e036d37e9a59d27d63f46af1d4d07ee0f76181c7d3') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"--}}
 {{--                php7.4 composer-setup.php--}}
 {{--                php7.4 -r "unlink('composer-setup.php');"--}}
-                php7.4 composer.phar install
+{{--                php7.4 composer.phar install--}}
             </li>
 {{--            <li>--}}
 {{--                <a href="#" title="Theme Settings" data-filter-tags="theme settings">--}}

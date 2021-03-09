@@ -24,6 +24,8 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
     <link rel="mask-icon" href="/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    @livewireStyles
+
 </head>
 <!-- BEGIN Body -->
 
@@ -928,6 +930,8 @@
                 + src/../jquery-snippets.js (core) -->
 <script src="/js/vendors.bundle.js"></script>
 <script src="/js/app.bundle.js"></script>
+@livewireScripts
+
 </body>
 <!-- END Body -->
 </html>
