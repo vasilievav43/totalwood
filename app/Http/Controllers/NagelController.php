@@ -25,7 +25,7 @@ class NagelController extends Controller
         }
        $nagel=Nagel::set($request->visota, $request->dlina, $request->dlina_z, $request->shag)->setCeloe($celoe)->all();
 
-        //dd($nagel);
+
 
 
         return view('stena.nagel', compact('nagel'));

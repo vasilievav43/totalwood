@@ -12,12 +12,12 @@ class Lagi extends Component
     public function mount()
     {
         $this->room=[
-            ['dlina'=>'' , 'shirina' =>'']
+            ['dlina'=>'' , 'shirina' =>'','tolshina1' =>'','tolshina2' =>'']
         ];
     }
 
     public function addRoom(){
-        $this->room[]=['dlina'=>'' , 'shirina' =>''];
+        $this->room[]=['dlina'=>'' , 'shirina' =>'','tolshina1' =>'','tolshina2' =>''];
     }
     public function removeRoom($key){
         unset($this->room[$key]);

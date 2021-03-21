@@ -4,6 +4,7 @@
         <label class="form-label" for="basic-url">Размеры комнаты</label>
 
         @foreach($room as $key =>$val )
+
             <div class="form-group">
                 <div class="input-group">
                     <div class="input-group-prepend">
@@ -11,8 +12,10 @@
                             <i class="fal fa-times"></i>
                         </button>
                     </div>
-                    <input type="number" step="100" aria-label="Длина" class="form-control" placeholder="Длина" wire:model="room.{{$key}}.dlina">
-                    <input type="number" step="100" aria-label="Ширина" class="form-control" placeholder="Ширина" wire:model="room.{{$key}}.shirina">
+                    <input type="number" step="10" name="dlina_room[]" aria-label="Длина" class="form-control" placeholder="Длина" wire:model="room.{{$key}}.dlina">
+                    <input type="number" step="10" name="shirina_room[]" aria-label="Ширина" class="form-control" placeholder="Ширина" wire:model="room.{{$key}}.shirina">
+                    <input type="number" step="5" name="tolshina1[]" aria-label="Толщина1" class="form-control" placeholder="Толщина1" value="0"  wire:model="room.{{$key}}.tolshina1">
+                    <input type="number" step="5" name="tolshina2[]" aria-label="Толщина2" class="form-control" placeholder="Толщина2" value="0" wire:model="room.{{$key}}.tolshina2">
                     <div class="input-group-append">
                         <span class="input-group-text">мм</span>
                     </div>

@@ -22,14 +22,14 @@
 
     <div class="subheader">
         <h1 class="subheader-title">
-            <i class='fal fa-info-circle'></i> Нагель
+            <i class='fal fa-info-circle'></i> Лаги
             <small>
-               Расчет количества нагелей
+               Расчет количества лаг в комнате
             </small>
         </h1>
     </div>
     <div class="row">
-    <div class="col-lg-4">
+    <div class="col-lg-6">
         <div id="panel-1" class="panel">
             <div class="panel-hdr">
                 <h2>
@@ -46,20 +46,19 @@
                     <div class="panel-tag">
                         <p>Рассчитайте кол-во лаг</p>
                     </div>
-                    <form action="{{route('nagel.raschet')}}" method="Post">
+                    <form action="{{route('lagi.raschet')}}" method="Post">
                         @csrf
                         <div class="form-group">
                             <label class="form-label" for="dollar-1">Размеры балки</label>
                             <div class="input-group input-group-multi-transition">
-                                <input type="number" step="10" class="form-control" aria-label="Высота балки"  placeholder="Высота">
-                                <input type="number"  step="any" class="form-control" aria-label="Толщина балки" placeholder="Толщина">
-                                <input type="number" step="any" class="form-control" aria-label="Длина заготоки" placeholder="Длина">
+                                <input  type="number" name="visota" step="10" required  class="form-control" aria-label="Высота балки"  placeholder="Высота">
+                                <input type="number" name="tolshina"  step="any" required class="form-control" aria-label="Толщина балки" placeholder="Толщина">
+                                <input type="number" name="dlina" step="1000" required class="form-control" aria-label="Длина заготоки" placeholder="Длина">
                                 <div class="input-group-append">
                                     <span class="input-group-text">мм</span>
                                 </div>
                             </div>
                         </div>
-
                         @livewire('lagi')
 
 
@@ -74,14 +73,12 @@
                         </div>
                     </form>
 
-
-
                 </div>
             </div>
         </div>
     </div>
 
-        <div class="col-lg-8">
+        <div class="col-lg-6">
             <div id="panel-6" class="panel">
                 <div class="panel-hdr">
                     <h2>

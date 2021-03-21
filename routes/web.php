@@ -19,4 +19,5 @@ Route::get('/nagel', [NagelController::class, 'index'])->name('nagel');
 Route::post('/nagel/raschet', [NagelController::class, 'raschet'])->name('nagel.raschet');
 
 Route::get('/lagi', [LagiController::class, 'index'])->name('lagi');
+Route::post('/lagi/raschet', [LagiController::class, 'raschet'])->name('lagi.raschet');
 
